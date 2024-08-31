@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./styles/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="font-domine">
+    <!-- header code starts here-->
+    <header class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700 dark:text-white">
+        <div class="flex flex-row justify-between md:items-end px-5 md:px-100 py-2">
+            <div class="md:hidden"> <!-- div for icon -->
+                <ion-icon name="heart" class="text-purple-700"></ion-icon>
+            </div>
+            <div class="relative"> <!-- div for logo -->
+                <a href="index.html">
+                    <div
+                        class="absolute top-0 z-16 h-16 w-16 md:h-20 md:w-20 rounded-full outline-2 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer dark:outline-white">
+                    </div>
+                    <img src="./src/images/logo.png" class="h-16 w-16 md:h-20 md:w-20 z-20" alt="logo">
+                </a>
+            </div>
+            <div class="flex items-start md:items-center"> <!-- div for nav bar content -->
+                <div
+                    class="hidden md:grid grid-cols-6 gap-x-10 grow items-stretch place-content-center justify-items-center px-5 max-w-7xl">
+                    <a href="index.html"> <!-- home -->
+                        <div>
+                            Home
+                        </div>
+                    </a>
+                    <a href="menus.html"> <!-- menus -->
+                        <div>
+                            Menus
+                        </div>
+                    </a>
+                    <a href="gallery.html"> <!-- gallery -->
+                        <div>
+                            Gallery
+                        </div>
+                    </a>
+                    <a href="blogs.html"  class="border-b-4 border-purple-400"> <!-- blogs -->
+                        <div>
+                            Blogs
+                        </div>
+                    </a>
+                    <a href="faqs.html"> <!-- faqs -->
+                        <div>
+                            FAQs
+                        </div>
+                    </a>
+                    <a href="contacts.html"> <!-- contacts -->
+                        <div>
+                            Contacts
+                        </div>
+                    </a>
+                </div>
+                <div class="w-5 h-5"> <!-- div for background color change -->
+                    <div id="light" class="hidden cursor-pointer place-self-center dark:text-white" title="Normal Mode" onclick="changeTheme('light')">
+                        <ion-icon name="sunny-outline"></icon-icon>
+                    </div>
+                    <div id="dark" class="hidden cursor-pointer place-self-center" title="Dark Mode" onclick="changeTheme('dark')">
+                        <ion-icon name="moon"></icon-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header code ends here-->
+
+    <!-- hero section code starts from here-->
+    <main>
+        <div class="w-full dark:bg-gray-800">
+
+            <div class="mx-auto max-w-7xl px-6 lg:px-8 pt-8 pb-8">
+                <div class="mx-auto max-w-2xl text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">From The Blog</h2>
+                    <p class="mt-2 text-lg leading-8 text-gray-600 dark:text-gray-300">
+                        Practice healthy diet for long life.
+                    </p>
+                </div>
+                <div
+                    class="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+                    <!-- First blog post -->
+                    <article
+                        class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+                        <img src="./src/blogs/blog2.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+                        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                        <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300"><time
+                                datetime="2023-10-11" class="mr-8">Oct 11, 2023</time>
+                            <div class="-ml-4 flex items-center gap-x-4"><svg viewBox="0 0 2 2"
+                                    class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
+                                    <circle cx="1" cy="1" r="1"></circle>
+                                </svg>
+                                <div class="flex gap-x-2.5">
+                                    <img src="./src/images/logo.png" alt="" class="h-6 w-6 flex-none rounded-full bg-white/10">Eateries
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                            <a href=""><span class="absolute inset-0"></span>Healthy Diet</a>
+                        </h3>
+                    </article>
+                    <!-- Second blog post -->
+                    <article
+                        class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+                        <img src="./src/blogs/blog3.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+                        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                        <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300"><time
+                                datetime="2023-09-25" class="mr-8">Sept 25, 2023</time>
+                            <div class="-ml-4 flex items-center gap-x-4"><svg viewBox="0 0 2 2"
+                                    class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
+                                    <circle cx="1" cy="1" r="1"></circle>
+                                </svg>
+                                <div class="flex gap-x-2.5">
+                                    <img src="./src/images/logo.png" alt="" class="h-6 w-6 flex-none rounded-full bg-white/10">Eateries
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                            <a href=""><span class="absolute inset-0"></span>Healthy Fruits</a>
+                        </h3>
+                    </article>
+                    <!-- Third blog post -->
+                    <article
+                        class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+                        <img src="./src/blogs/blog4.jpg" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover">
+                        <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                        <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                        <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300"><time
+                                datetime="2023-09-24" class="mr-8">Sept 24, 2023</time>
+                            <div class="-ml-4 flex items-center gap-x-4"><svg viewBox="0 0 2 2"
+                                    class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
+                                    <circle cx="1" cy="1" r="1"></circle>
+                                </svg>
+                                <div class="flex gap-x-2.5">
+                                    <img src="./src/images/logo.png" alt="" class="h-6 w-6 flex-none rounded-full bg-white/10">Eateries
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                            <a href=""><span class="absolute inset-0"></span>Sugar Free Items</a>
+                        </h3>
+                    </article>
+                    <!-- More blog posts can be added similarly -->
+                </div>
+            </div>
+        
+        </div>
+    </main>
+    <!-- hero section code ends from here-->
+
+
+    <script>
+        let lightIcon = document.querySelector('#light')
+        let darkIcon = document.querySelector('#dark')
+        changeTheme(localStorage.theme)
+        function changeTheme(theme){
+            if(theme === 'light'){
+                document.documentElement.classList.remove('dark')
+                lightIcon.classList.add('hidden')
+                darkIcon.classList.remove('hidden')
+            }else if(theme = 'dark'){
+                document.documentElement.classList.add('dark')
+                lightIcon.classList.remove('hidden')
+                darkIcon.classList.add('hidden')
+            }
+            localStorage.setItem('theme',theme)
+        }
+    </script>
+</body>
+
+</html>

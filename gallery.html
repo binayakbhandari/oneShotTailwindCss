@@ -15,15 +15,16 @@
 
 <body class="font-domine">
     <!-- header code starts here-->
-    <header class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700 dark:text-white">
+    <header
+        class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700 dark:text-white">
         <div class="flex flex-row justify-between md:items-end px-5 md:px-100 py-2">
             <div class="md:hidden"> <!-- div for icon -->
-                <ion-icon name="heart" class="text-purple-700 dark:text-white"></ion-icon>
+                <ion-icon name="heart" class="text-purple-700"></ion-icon>
             </div>
             <div class="relative"> <!-- div for logo -->
                 <a href="index.html">
                     <div
-                        class="absolute top-0 z-10 h-16 w-16 md:h-20 md:w-20 rounded-full outline-2 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer dark:outline-white">
+                        class="absolute top-0 z-16 h-16 w-16 md:h-20 md:w-20 rounded-full outline-2 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer dark:outline-white">
                     </div>
                     <img src="./src/images/logo.png" class="h-16 w-16 md:h-20 md:w-20 z-20" alt="logo">
                 </a>
@@ -32,7 +33,7 @@
                 <div
                     class="hidden md:grid grid-cols-6 gap-x-10 grow items-stretch place-content-center justify-items-center px-5 max-w-7xl">
                     <a href="index.html"> <!-- home -->
-                        <div class="border-b-4 border-purple-400">
+                        <div>
                             Home
                         </div>
                     </a>
@@ -41,7 +42,7 @@
                             Menus
                         </div>
                     </a>
-                    <a href="gallery.html"> <!-- home -->
+                    <a href="gallery.html" class="border-b-4 border-purple-400"> <!-- home -->
                         <div>
                             Gallery
                         </div>
@@ -63,10 +64,12 @@
                     </a>
                 </div>
                 <div class="w-5 h-5"> <!-- div for background color change -->
-                    <div id="light" class="hidden cursor-pointer place-self-center dark:text-white" title="Normal Mode" onclick="changeTheme('light')">
+                    <div id="light" class="hidden cursor-pointer place-self-center dark:text-white" title="Normal Mode"
+                        onclick="changeTheme('light')">
                         <ion-icon name="sunny-outline"></icon-icon>
                     </div>
-                    <div id="dark" class="hidden cursor-pointer place-self-center" title="Dark Mode" onclick="changeTheme('dark')">
+                    <div id="dark" class="hidden cursor-pointer place-self-center" title="Dark Mode"
+                        onclick="changeTheme('dark')">
                         <ion-icon name="moon"></icon-icon>
                     </div>
                 </div>
@@ -76,42 +79,73 @@
     <!-- header code ends here-->
 
     <!-- hero section code starts from here-->
-    <main class="dark:bg-slate-300">
-    
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-10">
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/sf.png" alt="">
-            </div>
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/nf.png" alt="">
-            </div>
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/vf.png" alt="">
-            </div>
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/juices.png" alt="">
-            </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-10 bg-purple-100 dark:bg-slate-400">
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image1.jpg" alt="">
         </div>
-    
-    </main>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image2.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image3.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image4.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image5.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image6.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image7.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image8.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image9.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image10.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image11.jpg" alt="">
+        </div>
+        <div>
+            <img class="h-auto max-w-full rounded-lg"
+                src="./src/gallery/image12.jpg" alt="">
+        </div>
+    </div>
     <!-- hero section code ends from here-->
-
 
     <script>
         let lightIcon = document.querySelector('#light')
         let darkIcon = document.querySelector('#dark')
         changeTheme(localStorage.theme)
-        function changeTheme(theme){
-            if(theme === 'light'){
+        function changeTheme(theme) {
+            if (theme === 'light') {
                 document.documentElement.classList.remove('dark')
                 lightIcon.classList.add('hidden')
                 darkIcon.classList.remove('hidden')
-            }else if(theme = 'dark'){
+            } else if (theme = 'dark') {
                 document.documentElement.classList.add('dark')
                 lightIcon.classList.remove('hidden')
                 darkIcon.classList.add('hidden')
             }
-            localStorage.setItem('theme',theme)
+            localStorage.setItem('theme', theme)
         }
     </script>
 </body>

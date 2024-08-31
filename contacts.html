@@ -18,12 +18,12 @@
     <header class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700 dark:text-white">
         <div class="flex flex-row justify-between md:items-end px-5 md:px-100 py-2">
             <div class="md:hidden"> <!-- div for icon -->
-                <ion-icon name="heart" class="text-purple-700 dark:text-white"></ion-icon>
+                <ion-icon name="heart" class="text-purple-700"></ion-icon>
             </div>
             <div class="relative"> <!-- div for logo -->
                 <a href="index.html">
                     <div
-                        class="absolute top-0 z-10 h-16 w-16 md:h-20 md:w-20 rounded-full outline-2 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer dark:outline-white">
+                        class="absolute top-0 z-16 h-16 w-16 md:h-20 md:w-20 rounded-full outline-2 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer dark:outline-white">
                     </div>
                     <img src="./src/images/logo.png" class="h-16 w-16 md:h-20 md:w-20 z-20" alt="logo">
                 </a>
@@ -32,7 +32,7 @@
                 <div
                     class="hidden md:grid grid-cols-6 gap-x-10 grow items-stretch place-content-center justify-items-center px-5 max-w-7xl">
                     <a href="index.html"> <!-- home -->
-                        <div class="border-b-4 border-purple-400">
+                        <div>
                             Home
                         </div>
                     </a>
@@ -56,7 +56,7 @@
                             FAQs
                         </div>
                     </a>
-                    <a href="contacts.html">
+                    <a href="contacts.html" class="border-b-4 border-purple-400">
                         <div>
                             Contacts
                         </div>
@@ -76,23 +76,53 @@
     <!-- header code ends here-->
 
     <!-- hero section code starts from here-->
-    <main class="dark:bg-slate-300">
-    
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-10">
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/sf.png" alt="">
-            </div>
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/nf.png" alt="">
-            </div>
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/vf.png" alt="">
-            </div>
-            <div>
-                <img class="rounded-lg animate-rotating" src="./src/images/juices.png" alt="">
+    <main>
+        <div class="min-h-screen bg-white py-6 flex flex-col justify-center sm:py-12 dark:bg-slate-800">
+            <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                <div
+                    class="absolute inset-0 bg-purple-200 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+                </div>
+                <div class="text-purple-700 font-bold relative px-4 py-10 bg-purple-300 shadow-lg sm:rounded-3xl sm:p-20">
+        
+                    <div class="text-center pb-6">
+                        <h1 class="text-3xl">Contact Us!</h1>
+        
+                        <p class="text-purple-600">   
+                            Fill up the form below to send us a message.
+                        </p>
+                    </div>
+        
+                    <form>
+        
+                        <input
+                                class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text" placeholder="Name" name="name">
+        
+                        <input
+                                class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="email" placeholder="Email" name="email">
+        
+                        <input
+                                class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text" placeholder="Subject" name="_subject">
+        
+                        <textarea
+                                class="shadow mb-4 min-h-0 appearance-none border rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text" placeholder="Type your message here..." name="message" style="height: 121px;"></textarea>
+        
+                        <div class="flex justify-between">
+                            <input
+                                class="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="submit" value="Send ➤">
+                            <input
+                                class="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="reset">
+                        </div>
+        
+                    </form>
+                </div>
             </div>
         </div>
-    
     </main>
     <!-- hero section code ends from here-->
 
