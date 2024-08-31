@@ -14,6 +14,7 @@
 </head>
 
 <body class="font-domine">
+    <!-- header code starts here-->
     <header class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700 dark:text-white">
         <div class="flex flex-row justify-between md:items-end px-5 md:px-100 py-2">
             <div class="md:hidden"> <!-- div for icon -->
@@ -22,7 +23,7 @@
             <div class="relative"> <!-- div for logo -->
                 <a href="index.html">
                     <div
-                        class="absolute top-0 z-16 h-10 w-16 md:h-20 md:w-20 rounded-full outline-2 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer dark:outline-white">
+                        class="absolute top-0 z-16 h-16 w-16 md:h-20 md:w-20 rounded-full outline-2 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer dark:outline-white">
                     </div>
                     <img src="./src/images/logo.png" class="h-16 w-16 md:h-20 md:w-20 z-20" alt="logo">
                 </a>
@@ -72,6 +73,42 @@
             </div>
         </div>
     </header>
+    <!-- header code ends here-->
+
+    <!-- hero section code starts from here-->
+    <main>
+        <div class="relative p-3 md:p-10 min-h-screen max-w-screen dark:contrast-125">
+            <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-2 items-stretch place-content-center min-h-screen text-3xl">
+                <div class="border md:border-y-4 border-sky-400 dark:border-stone-300">
+                    <div>
+                        South Indian
+                        <img src="./src/images/sf.png" alt="">
+                    </div>
+                </div>
+                <div class="border md:border-y-4 border-sky-400 dark:border-stone-300">
+                    <div>
+                        North Indian
+                        <img src="./src/images/nf.png" alt="">
+                    </div>
+                </div>
+                <div class="border md:border-y-4 border-sky-400 dark:border-stone-300">
+                    <div>
+                        East Nepalese
+                        <img src="./src/images/juices.jpg" alt="">
+                    </div>
+                </div>
+                <div class="border md:border-y-4 border-sky-400 dark:border-stone-300">
+                    <div>
+                        West Nepalese
+                        <img src="./src/images/vf.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- hero section code ends from here-->
+
+
     <script>
         let lightIcon = document.querySelector('#light')
         let darkIcon = document.querySelector('#dark')
