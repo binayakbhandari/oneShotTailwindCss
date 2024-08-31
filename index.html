@@ -14,7 +14,7 @@
 </head>
 
 <body class="font-domine">
-    <header class="sticky top-0 z-20 bg-purple-100 text-purple-100 w-full h-12 md:h-auto">
+    <header class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-blue-600">
         <div class="flex flex-row justify-between md:items-end px-5 md:px-100 py-2">
             <div class="md:hidden"> <!-- div for icon -->
                 <ion-icon name="heart" class="text-purple-700"></ion-icon>
@@ -29,9 +29,9 @@
             </div>
             <div class="flex items-start md:items-center"> <!-- div for nav bar content -->
                 <div
-                    class="hidden md:grid grid-cols-6 gap-x-10 grow text-black items-stretch place-content-center justify-items-center px-5 max-w-7xl">
+                    class="hidden md:grid grid-cols-6 gap-x-10 grow items-stretch place-content-center justify-items-center px-5 max-w-7xl">
                     <a href="index.html"> <!-- home -->
-                        <div class="border-b-4 border-purple-600">
+                        <div class="border-b-4 border-purple-400">
                             Home
                         </div>
                     </a>
@@ -61,7 +61,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="w-5 h-5 text-black"> <!-- div for background color change -->
+                <div class="w-5 h-5"> <!-- div for background color change -->
                     <div id="light" class="hidden cursor-pointer place-self-center" title="Normal Mode">
                         <ion-icon name="sunny-outline"></icon-icon>
                     </div>
@@ -72,6 +72,17 @@
             </div>
         </div>
     </header>
+    <script>
+        let lightIcon = document.querySelector('#light')
+        let darkIcon = document.querySelector('#dark')
+        function changeTheme(theme){
+            if(theme === "light"){
+                document.documentElement.classList.remove('dark')
+                lightIcon.classList.add('hidden')
+                darkIcon.classList.remove('hidden')
+            }
+        }
+    </script>
 </body>
 
 </html>
