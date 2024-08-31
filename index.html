@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,51 +14,61 @@
 </head>
 
 <body class="font-domine">
-    <header class="sticky top-0 z-20 bg-purple-100 text-purple-900 font-bold w-full h-12 md:h-auto">
+    <header class="sticky top-0 z-20 bg-purple-100 text-purple-100 w-full h-12 md:h-auto">
         <div class="flex flex-row justify-between md:items-end px-5 md:px-100 py-2">
-            <div class="md:hidden">
-                <a href="">
-                    <ion-icon name="bug-outline" class="size-11"></ion-icon>
-                </a>
+            <div class="md:hidden"> <!-- div for icon -->
+                <ion-icon name="heart" class="text-purple-700"></ion-icon>
             </div>
-            <div class="relative">
-                <a href="">
-                    <div class="absolute top-0 z-10 h-16 w-16 md:h-24 md:w-24 md:w-24 rounded-full outline-dotted outline-purple-700 animate-rotating duration-500 ease-out hover:animate-none cursor-pointer">
-                    </div>
-                    <img src="./src/images/logo.png" class="h-16 w-16 md:h-24 md:w-24 z-20" alt="logo" srcset="">
-                </a>
-            </div>
-            <div class="flex items-start md:items-center">
-                <a href="">
-                    <div>
-                        Home
-                    </div>
-                </a>
+            <div class="relative"> <!-- div for logo -->
                 <a href="index.html">
-                    <div>
-                        Menus
+                    <div
+                        class="absolute top-0 z-10 h-16 w-16 md:h-24 md:w-24 rounded-full outline-4 outline-dashed outline-purple-700 animate-rotating duration-1000 ease-out hover:animate-none cursor-pointer">
                     </div>
+                    <img src="./src/images/logo.png" class="h-16 w-16 md:h-24 md:w-24 z-20" alt="logo">
                 </a>
-                <a href="gallery.html">
-                    <div>
-                        Gallery
+            </div>
+            <div class="flex items-start md:items-center"> <!-- div for nav bar content -->
+                <div
+                    class="hidden md:grid grid-cols-6 gap-x-10 grow text-black items-stretch place-content-center justify-items-center px-5 max-w-7xl">
+                    <a href="index.html"> <!-- home -->
+                        <div class="border-b-4 border-purple-600">
+                            Home
+                        </div>
+                    </a>
+                    <a href="menus.html"> <!-- home -->
+                        <div>
+                            Menus
+                        </div>
+                    </a>
+                    <a href="gallery.html"> <!-- home -->
+                        <div>
+                            Gallery
+                        </div>
+                    </a>
+                    <a href="blogs.html"> <!-- home -->
+                        <div>
+                            Blogs
+                        </div>
+                    </a>
+                    <a href="faqs.html">
+                        <div>
+                            FAQs
+                        </div>
+                    </a>
+                    <a href="contacts.html">
+                        <div>
+                            Contacts
+                        </div>
+                    </a>
+                </div>
+                <div class="w-5 h-5 text-black"> <!-- div for background color change -->
+                    <div id="light" class="hidden cursor-pointer place-self-center" title="Normal Mode">
+                        <ion-icon name="sunny-outline"></icon-icon>
                     </div>
-                </a>
-                <a href="blogs.html">
-                    <div>
-                        Blogs
+                    <div id="dark" class="hidden cursor-pointer place-self-center" title="Dark Mode">
+                        <ion-icon name="moon"></icon-icon>
                     </div>
-                </a>
-                <a href="faqs.html">
-                    <div>
-                        Faqs
-                    </div>
-                </a>
-                <a href="contact.html">
-                    <div>
-                        Contacts
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
     </header>

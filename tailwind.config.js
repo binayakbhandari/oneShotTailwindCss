@@ -7,7 +7,7 @@ module.exports = {
         domine : ['Domine','serif']
       },
       animation : {
-        'rotating' : 'rotating 5s linear infinite'
+        'rotating' : 'rotating 10s linear infinite'
       },
       keyframes : {
         rotating : {
