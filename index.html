@@ -15,7 +15,8 @@
 
 <body class="font-domine">
     <!-- header code starts here-->
-    <header class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700 dark:text-white dark:">
+    <header
+        class="sticky top-0 z-20 bg-purple-100 text-purple-800 w-full h-12 md:h-auto dark:bg-slate-800 shadow-md dark:shadow-zinc-700 dark:text-white">
         <div class="flex flex-row justify-between md:items-end px-5 md:px-100 py-2">
             <div class="md:hidden"> <!-- div for icon -->
                 <ion-icon name="heart" class="text-purple-700 dark:text-white"></ion-icon>
@@ -63,10 +64,12 @@
                     </a>
                 </div>
                 <div class="w-5 h-5"> <!-- div for background color change -->
-                    <div id="light" class="hidden cursor-pointer place-self-center dark:text-white" title="Normal Mode" onclick="changeTheme('light')">
+                    <div id="light" class="hidden cursor-pointer place-self-center dark:text-white" title="Normal Mode"
+                        onclick="changeTheme('light')">
                         <ion-icon name="sunny-outline"></icon-icon>
                     </div>
-                    <div id="dark" class="hidden cursor-pointer place-self-center" title="Dark Mode" onclick="changeTheme('dark')">
+                    <div id="dark" class="hidden cursor-pointer place-self-center" title="Dark Mode"
+                        onclick="changeTheme('dark')">
                         <ion-icon name="moon"></icon-icon>
                     </div>
                 </div>
@@ -74,9 +77,9 @@
         </div>
     </header>
     <!-- header code ends here-->
-    
+
     <!-- hero section code starts from here-->
-    <main class="dark:bg-slate-500 bg-purple-100 relative overflow-hidden h-screen">
+    <main class="dark:bg-slate-500 bg-purple-100 relative overflow-hidden h-screen shadow-md shadow-purple-400 dark:shadow-gray-600">
         <div class="bg-purple-100 dark:bg-slate-500 flex relative items-center overflow-hidden">
             <div class="container mx-auto px-6 flex relative py-16">
                 <div class="sm:w-2/3 lg:w-2/5 flex flex-col relative">
@@ -90,7 +93,8 @@
                         </span>
                     </h1>
                     <p class="text-sm sm:text-base text-gray-700 dark:text-white mt-5">
-                        Explore a variety of healthy, delicious meals tailored to your taste. Fresh and nutritious options,
+                        Explore a variety of healthy, delicious meals tailored to your taste. Fresh and nutritious
+                        options,
                         delivered straight to your door.
                     </p>
                     <div class="flex flex-col gap-3 sm:flex sm:flex-row mt-10">
@@ -111,6 +115,49 @@
         </div>
     </main>
 
+    <main class="dark:bg-slate-400">
+        <!-- Container -->
+        <div
+            class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:pt-12 lg:pb-12 xl:max-w-6xl">
+
+            <!-- Image Column -->
+            <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+                <img class="h-full w-full object-cover" src="./src/kitchen/11.jpg" alt="Winding mountain road">
+            </div>
+            <!-- Close Image Column -->
+
+            <!-- Text Column -->
+            <div
+                class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
+                <!-- Text Wrapper -->
+                <div class="flex flex-col p-12 md:px-16">
+                    <h2 class="text-2xl font-medium uppercase text-purple-800 lg:text-4xl">Special Masala for special
+                        taste
+                    </h2>
+                    <p class="mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat.
+                    </p>
+                    <!-- Button Container -->
+                    <div class="mt-8">
+                        <a href="#"
+                            class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-purple-600 py-4 px-10 hover:bg-purple-800 hover:shadow-md md:w-48">Read
+                            More</a>
+                    </div>
+                </div>
+                <!-- Close Text Wrapper -->
+            </div>
+            <!-- Close Text Column -->
+
+        </div>
+    </main>
+
+
+
     <!-- hero section code ends from here-->
 
 
@@ -118,17 +165,17 @@
         let lightIcon = document.querySelector('#light')
         let darkIcon = document.querySelector('#dark')
         changeTheme(localStorage.theme)
-        function changeTheme(theme){
-            if(theme === 'light'){
+        function changeTheme(theme) {
+            if (theme === 'light') {
                 document.documentElement.classList.remove('dark')
                 lightIcon.classList.add('hidden')
                 darkIcon.classList.remove('hidden')
-            }else if(theme = 'dark'){
+            } else if (theme = 'dark') {
                 document.documentElement.classList.add('dark')
                 lightIcon.classList.remove('hidden')
                 darkIcon.classList.add('hidden')
             }
-            localStorage.setItem('theme',theme)
+            localStorage.setItem('theme', theme)
         }
     </script>
 </body>
